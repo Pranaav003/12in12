@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply antialiased;
+  }
+  body {
+    @apply bg-desk font-sans text-base text-ink transition-colors duration-300;
+    @apply dark:bg-deskDark dark:text-zinc-100;
+  }
+}
+
+/* Site-wide atmosphere: seamless grain on desk (1024px tile, no invert — avoids streaks) */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: url("/grain.svg");
+  background-repeat: repeat;
+  background-size: 1024px 1024px;
+  opacity: 0.028;
+  mix-blend-mode: multiply;
+}
+
+.dark body::before {
+  opacity: 0.032;
+  mix-blend-mode: soft-light;
+  filter: none;
+}
+
+/* Newsprint: subtle paper grain (same high-res tile; blend modes replace invert) */
+.news-clipping {
+  position: relative;
+}
+
+.news-clipping::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: url("/grain.svg");
+  background-repeat: repeat;
+  background-size: 1024px 1024px;
+  opacity: 0.035;
+  mix-blend-mode: multiply;
+}
+
+.dark .news-clipping::before {
+  opacity: 0.038;
+  mix-blend-mode: soft-light;
+  filter: none;
+}
+
+.news-clipping::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  pointer-events: none;
+  z-index: 1;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), transparent);
+}
+
+.dark .news-clipping::after {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.08), transparent);
+}
