@@ -24,8 +24,8 @@ export const PRODUCTS = [
     monthIndex: 0,
     title: "Centra: Extension",
     slug: "centraextension",
-    status: "underReview",
-    statusLabel: "In Progress",
+    status: "live",
+    statusLabel: "Live",
     description:
       "The original distraction deterrent. Block websites from distracting you, and kill procrastination.",
     blurCard: false,
@@ -33,7 +33,7 @@ export const PRODUCTS = [
     heroImageAlt: "Screenshot of Centra: Extension",
     productType: "Browser Extension",
     year: 2026,
-    timeline: "January 2026 — marketplace review",
+    timeline: "January 2026 — Chrome Web Store",
     builtWith: ["Chrome extension", "JavaScript"],
     category: "Productivity",
     filedUnder: "Systems / Tools / Attention",
@@ -48,13 +48,18 @@ The extension is that door for the browser — blocklists, a power switch, and e
       build: `The work wasn’t clever features; it was restraint. A popup you can actually finish using in ten seconds. Blocking that feels binary when you need it to — on or off — instead of another dashboard to babysit.
 
 I chased edge cases anyway: places people actually procrastinate, and the gap between “blocked” and “still tempting.” That tension is most of the engineering — the rest is making it feel obvious.`,
-      wrong: `The store moves slower than code. I also let myself maintain parallel paths while iterating — fine for learning, expensive for clarity. Shipping through someone else’s marketplace means your release isn’t when you push; it’s when a reviewer says yes.`,
+      wrong: `The store moved slower than code. I also let myself maintain parallel paths while iterating — fine for learning, expensive for clarity. Shipping through someone else’s marketplace meant the release wasn’t when I pushed; it was when a reviewer said yes.`,
       learned: `A browser extension isn’t a mini app; it’s a negotiation with the platform. Permission language, host rules, and reviewer expectations are part of the user experience — not footnotes.
 
 Trust isn’t a feature list. It’s consistency: the extension and the app have to feel like one decision, not two products that happen to share a name.`,
-      outcome: `Still in review. When it clears, it sits beside the live Centra app as the other half of the same promise — until then, the build is public, the listing isn’t.`,
+      outcome: `It’s live in the Chrome Web Store — the other half of the same promise as the Centra app, installable from a listing instead of a zip. Iteration doesn’t stop; the bar just moved from “pass review” to “earn the next user.”`,
     },
     links: [
+      {
+        label: "Chrome Web Store",
+        href: "https://chromewebstore.google.com/detail/centra/mpkkmpcgdglpdmhflpjnpogigolicdop",
+        note: "Install Centra: Extension",
+      },
       {
         label: "Extension — GitHub",
         href: "https://github.com/Pranaav003/Centra/tree/main/FocusExtension",
@@ -103,9 +108,14 @@ I biased toward boring where it mattered — fewer novel abstractions, more clar
       learned: `Alignment is a design problem. When the extension, the app, and the server disagree, the user feels the glitch before they can name it — wrong redirect, wrong state, wrong trust.
 
 The insight that stuck: coherence beats cleverness. People forgive rough edges on one surface; they don’t forgive a product that feels like three.`,
-      outcome: `February is the month I could say: here’s Centra as a live thing — messy, deployed, paired with January’s extension story. The repo holds the implementation details; this case file is the why and the scar tissue. BTW use code lifeofpranaav to get PRO for free. love you guys <3`,
+      outcome: `February is the month I could say: here’s Centra as a live thing — messy, deployed, paired with January’s extension, which is now in the Chrome Web Store too. The repo holds the implementation details; this case file is the why and the scar tissue. BTW use code lifeofpranaav to get PRO for free. love you guys <3`,
     },
     links: [
+      {
+        label: "Chrome Web Store — extension",
+        href: "https://chromewebstore.google.com/detail/centra/mpkkmpcgdglpdmhflpjnpogigolicdop",
+        note: "Browser blocking piece of Centra.",
+      },
       {
         label: "Centra on GitHub",
         href: "https://github.com/Pranaav003/Centra",
