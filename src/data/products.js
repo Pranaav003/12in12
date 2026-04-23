@@ -131,27 +131,55 @@ The insight that stuck: coherence beats cleverness. People forgive rough edges o
   {
     month: "March",
     monthIndex: 2,
-    title: "Month Three",
-    slug: "focusboard",
-    status: "comingSoon",
-    statusLabel: "Coming Soon",
-    description: "Reserved for the third ship.",
-    blurCard: true,
+    title: "Debrief",
+    slug: "debrief",
+    status: "live",
+    statusLabel: "Live",
+    description:
+      "Turn any meeting transcript into decisions, action items, and a follow-up email — automatically.",
+    blurCard: false,
+    heroImage: "/images/debrief.png",
+    heroImageAlt:
+      "DeBrief app in dark mode: title and tagline, Paste transcript / Upload audio toggle, transcript text area, Load example transcript, and Generate DeBrief button.",
+    productType: "Web app",
+    year: 2026,
+    timeline: "Shipped March 2026",
+    builtWith: ["Web app", "Transcription", "LLM"],
+    category: "Meetings",
+    filedUnder: "Work / Meetings / Follow-through",
+    archiveShelf: "Meetings · Clarity",
     summary:
-      "Not a task manager. A board that dares to stay empty until you mean it.",
+      "Meetings are where decisions get made and where they get lost. Debrief is the thirty-second bridge: paste a transcript or upload audio from Zoom, Meet, Teams, or a phone call, and get a structured debrief — not a wall of bullets, but outputs shaped for the kind of meeting you actually had.",
     sections: {
-      idea: `FocusBoard imagines a desk with one sheet of paper — not a filing cabinet. You pin what must happen today; everything else waits in the margin, literally out of focus.
+      idea: `Most “meeting notes” products are really text dumps with better fonts. I wanted something closer to a clerk who knows the genre: a standup wants shipped work and blockers; a sales call wants pain, objections, and a deal signal; a 1:1 wants feedback themes and commitments.
 
-The bet is that clarity beats capacity.`,
-      whyBuilt: `I’m tired of tools that reward inventory. I want something that rewards refusal — saying no to good ideas so the great one can breathe.`,
-      build: `This month is still in motion. The build will start with constraints: no notifications, no teams layer, no “smart” ranking.
+The idea isn’t summarization for its own sake — it’s extraction with intent. Decisions, action items with owners, open questions, and a follow-up email you could send without rewriting the room.`,
+      whyBuilt: `Everyone has left a call thinking “I should write that up” and then didn’t. Two weeks later, the same conversation happens again because nothing durable survived the hang-up.
 
-If it can’t be explained in one sentence, it doesn’t ship in v1.`,
-      wrong: `Not shipped yet — so the failures are still ahead of me. Ask me again in four weeks.`,
-      learned: `What I’ve learned so far is archival: every past project taught me that my first instinct is to over-build. FocusBoard is the experiment in under-building on purpose.`,
-      outcome: `Documentation and links will appear here once the project is live. For now, this page is a promise — and a sketch.`,
+I built Debrief for that exact failure mode — founders, managers, ops leads, anyone who runs meetings and would rather act on them than document them by hand.`,
+      build: `The product loop had to stay brutally short: paste or upload, generate, edit inline, share. Share links with viewer or editor access, optional chat against the meeting after the fact, and email the formatted debrief to attendees.
+
+“No account needed” on the marketing side had to stay honest for viewers — a clean rendered debrief on the link, not a login wall. The rest of the build was the unglamorous work: permissions, revocation, autosave on edits, and keeping the output structured when the model wants to ramble.`,
+      wrong: `Meeting-type detection is easy to demo and hard to earn trust on — edge cases where the transcript is messy, hybrid, or nobody said the quiet part out loud. Audio paths add their own failure modes (quality, diarization, latency).
+
+I’m still calibrating how much “magic” to promise on the landing page versus what feels reliably repeatable in production.`,
+      learned: `Generic summarization is a commodity; structure tied to meeting intent is the product. Users don’t want more text — they want fewer repeated meetings.
+
+Shipping share-by-link and email early taught me that distribution is part of the UX: if the debrief doesn’t look credible in someone else’s inbox, the loop breaks before the AI part even matters.`,
+      outcome: `Debrief is live at debrief.pranaaviyer.com — paste a transcript, try an example, upload audio, share a link, send email. The roadmap on the site (Zoom import, Meet, Slack, calendar, team workspaces, action-item tracking) is the honest “what’s next” list; March was about shipping the core loop, not pretending the integrations were already done.`,
     },
-    links: [],
+    links: [
+      {
+        label: "Live site",
+        href: "https://debrief.pranaaviyer.com/",
+        note: "Try it — paste a transcript or load the example; no account required to explore.",
+      },
+      {
+        label: "Feature requests",
+        href: "mailto:dev@pranaaviyer.com",
+        note: "Listed on the product roadmap section for feedback and requests.",
+      },
+    ],
   },
   {
     month: "April",
