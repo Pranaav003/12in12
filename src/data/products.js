@@ -179,6 +179,11 @@ Shipping share-by-link and email early taught me that distribution is part of th
         href: "mailto:dev@pranaaviyer.com",
         note: "Listed on the product roadmap section for feedback and requests.",
       },
+      {
+        label: "Debrief on GitHub",
+        href: "https://github.com/Pranaav003/Debrief",
+        note: "Source code and implementation details.",
+      },
     ],
   },
   {
