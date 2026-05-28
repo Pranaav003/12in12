@@ -117,14 +117,14 @@ The insight that stuck: coherence beats cleverness. People forgive rough edges o
         note: "Browser blocking piece of Centra.",
       },
       {
-        label: "Centra on GitHub",
-        href: "https://github.com/Pranaav003/Centra",
-        note: "Code, deployment notes, everything too detailed for this page.",
-      },
-      {
         label: "Live site",
         href: "https://centra.pranaaviyer.com/",
         note: "Where the landing and product actually run.",
+      },
+      {
+        label: "Centra on GitHub",
+        href: "https://github.com/Pranaav003/Centra",
+        note: "Code, deployment notes, everything too detailed for this page.",
       },
     ],
   },
@@ -189,27 +189,54 @@ Shipping share-by-link and email early taught me that distribution is part of th
   {
     month: "April",
     monthIndex: 3,
-    title: "Month Four",
-    slug: "clipmind",
-    status: "comingSoon",
-    statusLabel: "Coming Soon",
-    description: "Reserved for the fourth ship.",
-    blurCard: true,
+    title: "Signal",
+    slug: "signal",
+    status: "live",
+    statusLabel: "Live",
+    description:
+      "Reddit lead intelligence for small businesses — describe what you sell, Signal finds the conversations.",
+    blurCard: false,
+    productType: "Web app",
+    year: 2026,
+    timeline: "Shipped April 2026",
+    builtWith: ["React", "Express", "Postgres", "Redis", "LLM"],
+    category: "Lead gen",
+    filedUnder: "Work / Distribution / Reddit",
+    archiveShelf: "Leads · Reddit",
     summary:
-      "Lightning-fast clipping with memory you can trust — not another bookmark graveyard.",
+      "Most founders know their niche in theory and still have no idea where those people are actually complaining online. Signal is the listening layer: describe what you’re building in plain English, and it turns that into Reddit search plans, scored leads, AI draft replies, and a performance view for what you posted back.",
     sections: {
-      idea: `ClipMind starts from a guilty habit: I hoard tabs and screenshots like they’re ideas. They’re not — they’re anxiety in file form.
+      idea: `Cold outreach and generic keyword alerts both miss the same thing — context. The useful signal on Reddit isn’t “someone said a word I track.” It’s someone describing a problem your product could solve, in a thread where a helpful reply wouldn’t feel like spam.
 
-The idea is a capture flow so fast you actually use it, plus a retrieval story that respects context over chronology.`,
-      whyBuilt: `Because my second brain was a junk drawer. I want a tool that feels like a notebook in the pocket, not a warehouse.`,
-      build: `Planned as a tight loop: capture → tag with intent (not taxonomy) → resurface when relevant.
+I wanted a monitor, not a dashboard. You describe the customer and the pain; Signal figures out what to search, where to look, and which posts are worth opening.`,
+      whyBuilt: `I kept watching builders hunt for customers in the wrong places — blasting DMs, buying lists, or refreshing r/smallbusiness manually and calling it research.
 
-The engineering bet is on speed and search quality, not feature breadth.`,
-      wrong: `Pre-mortem: I’ll probably over-engineer sync. I’m writing that down now so future-me feels seen.`,
-      learned: `The lesson I’m carrying in: the best capture tools fail quietly — they never shame you for an empty inbox.`,
-      outcome: `Coming soon. When ClipMind ships, this page will hold the real postmortem — not a rehearsal.`,
+April’s bet was narrower: if your early users live on Reddit anyway, the product should do the tedious part — query planning, scanning, scoring, triage — so you spend time on replies that might actually land.`,
+      build: `The loop is create monitor → AI planner generates queries and subreddit targets → background worker scans Reddit on a schedule → leads land in an inbox with relevance scores, “why this score,” and optional AI draft replies.
+
+Under the hood that meant a real job pipeline, not a cron script pretending to be a product: Express API, React frontend, Postgres for monitors and leads, Redis/Bull queues, and a separate worker process that actually processes scans. The UI had to stay honest while scans run — progress in the background, unread tabs, snooze/mute/delete, reply tracking with upvote stats on a Performance page.
+
+The AI pieces split cleanly: a planner that rewrites your product description into search strategy (including marketplace-style demand vs. supply sides), and a classifier that decides whether a post is a lead worth showing — with evidence, not vibes.`,
+      wrong: `Infrastructure always wants to become the product. Getting Redis, Postgres, API, worker, and frontend all healthy locally — and then again on Render’s free tier with a worker exposed as a web service — ate more of April than any landing-page copy.
+
+Reddit is also a hostile API surface: rate limits, fit warnings for products that don’t belong there, and scans that take three to five minutes when you’d prefer instant gratification. I shipped the honest version of that timing in the onboarding instead of hiding it.`,
+      learned: `The best demo is a monitor you’d actually run. Signal gets better when the description names a real customer and problem — the planner, the preview, and the leads all improve together. That’s less a marketing line than the core design constraint.
+
+Lead quality beats lead volume. Showing someone why a post matched — and letting them snooze, mute, or delete without guilt — matters as much as the scan itself.`,
+      outcome: `Signal is live at signal.pranaaviyer.com with monitors, scheduled scans, scored leads, draft replies, and reply performance tracking. The repo documents the full stack and a Render blueprint for demo deploys; April was the month the worker pipeline and inbox had to be real, not a mocked “AI finds leads” slide deck.`,
     },
-    links: [],
+    links: [
+      {
+        label: "Live site",
+        href: "https://signal.pranaaviyer.com/",
+        note: "Create a monitor, run a scan, review scored Reddit leads and draft replies.",
+      },
+      {
+        label: "Signal on GitHub",
+        href: "https://github.com/Pranaav003/Signal",
+        note: "Full stack — API, worker, frontend, deploy blueprint, and local dev scripts.",
+      },
+    ],
   },
   {
     month: "May",
