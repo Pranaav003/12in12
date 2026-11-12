@@ -56,6 +56,11 @@ Trust isn’t a feature list. It’s consistency: the extension and the app have
     },
     links: [
       {
+        label: "Project website",
+        href: "https://pranaav003.github.io/Centra/extension/",
+        note: "Extension overview, installation steps, and Chrome Web Store link.",
+      },
+      {
         label: "Chrome Web Store",
         href: "https://chromewebstore.google.com/detail/centra/mpkkmpcgdglpdmhflpjnpogigolicdop",
         note: "Install Centra: Extension",
@@ -117,9 +122,9 @@ The insight that stuck: coherence beats cleverness. People forgive rough edges o
         note: "Browser blocking piece of Centra.",
       },
       {
-        label: "Live site",
-        href: "https://centra.pranaaviyer.com/",
-        note: "Where the landing and product actually run.",
+        label: "Project website",
+        href: "https://pranaav003.github.io/Centra/",
+        note: "Project overview, extension installation, and a link to the full app.",
       },
       {
         label: "Centra on GitHub",
@@ -170,9 +175,9 @@ Shipping share-by-link and email early taught me that distribution is part of th
     },
     links: [
       {
-        label: "Live site",
-        href: "https://debrief.pranaaviyer.com/",
-        note: "Try it — paste a transcript or load the example; no account required to explore.",
+        label: "Project website",
+        href: "https://pranaav003.github.io/Debrief/",
+        note: "Project overview and a link to the separately hosted full app.",
       },
       {
         label: "Feature requests",
@@ -196,6 +201,9 @@ Shipping share-by-link and email early taught me that distribution is part of th
     description:
       "Reddit lead intelligence for small businesses — describe what you sell, Signal finds the conversations.",
     blurCard: false,
+    heroImage: "/images/signal.png",
+    heroImageAlt:
+      "Signal landing hero in dark mode with headline about replacing ads, Reddit monitoring details, and Try Signal Free call to action.",
     productType: "Web app",
     year: 2026,
     timeline: "Shipped April 2026",
@@ -227,9 +235,9 @@ Lead quality beats lead volume. Showing someone why a post matched — and letti
     },
     links: [
       {
-        label: "Live site",
-        href: "https://signal.pranaaviyer.com/",
-        note: "Create a monitor, run a scan, review scored Reddit leads and draft replies.",
+        label: "Project website",
+        href: "https://pranaav003.github.io/Signal/",
+        note: "Project overview and a link to the full app for monitors and Reddit leads.",
       },
       {
         label: "Signal on GitHub",
