@@ -75,7 +75,7 @@ export function ProductCard({ product, index = 0 }) {
                 dark:shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]
               `}
             >
-              In progress · Not yet filed
+              {statusLabel} · Not yet filed
             </span>
           </div>
         )}
